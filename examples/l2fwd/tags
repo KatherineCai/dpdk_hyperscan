@@ -1,0 +1,286 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+APP	Makefile	/^APP = l2fwd$/;"	m
+BURST_TX_DRAIN_US	base_main.c	91;"	d	file:
+BURST_TX_DRAIN_US	main.c	111;"	d	file:
+CHECK_INTERVAL	base_main.c	493;"	d	file:
+CHECK_INTERVAL	main.c	608;"	d	file:
+CMD_LINE_OPT_MAC_UPDATING	base_main.c	408;"	d	file:
+CMD_LINE_OPT_MAC_UPDATING	main.c	523;"	d	file:
+CMD_LINE_OPT_MIN_NUM	base_main.c	/^	CMD_LINE_OPT_MIN_NUM = 256,$/;"	e	enum:__anon4	file:
+CMD_LINE_OPT_MIN_NUM	main.c	/^	CMD_LINE_OPT_MIN_NUM = 256,$/;"	e	enum:__anon1	file:
+CMD_LINE_OPT_NO_MAC_UPDATING	base_main.c	409;"	d	file:
+CMD_LINE_OPT_NO_MAC_UPDATING	main.c	524;"	d	file:
+HS_DEFINE	base_main.c	70;"	d	file:
+LOG_MAX	sniff.c	11;"	d	file:
+MAX_CHECK_TIME	base_main.c	494;"	d	file:
+MAX_CHECK_TIME	main.c	609;"	d	file:
+MAX_INTFCOUNT	config.h	31;"	d
+MAX_LCORECOUNT	config.h	30;"	d
+MAX_NUMANODE	config.h	29;"	d
+MAX_PKT_BURST	base_main.c	90;"	d	file:
+MAX_PKT_BURST	main.c	110;"	d	file:
+MAX_RX_QUEUE_PER_LCORE	base_main.c	113;"	d	file:
+MAX_RX_QUEUE_PER_LCORE	main.c	133;"	d	file:
+MAX_TIMER_PERIOD	base_main.c	147;"	d	file:
+MAX_TIMER_PERIOD	main.c	167;"	d	file:
+MAX_TX_QUEUE_PER_PORT	base_main.c	114;"	d	file:
+MAX_TX_QUEUE_PER_PORT	main.c	134;"	d	file:
+MBUF_SIZE	config.h	34;"	d
+MEMPOOL_CACHE_SIZE	base_main.c	92;"	d	file:
+MEMPOOL_CACHE_SIZE	main.c	112;"	d	file:
+NB_MBUF	base_main.c	88;"	d	file:
+NB_MBUF	config.h	33;"	d
+NB_MBUF	main.c	108;"	d	file:
+NIDS_CLOSE	nids.h	42;"	d
+NIDS_DATA	nids.h	41;"	d
+NIDS_DONT_CHKSUM	nids.h	48;"	d
+NIDS_DO_CHKSUM	nids.h	47;"	d
+NIDS_EXITING	nids.h	45;"	d
+NIDS_JUST_EST	nids.h	40;"	d
+NIDS_MAJOR	nids.h	15;"	d
+NIDS_MINOR	nids.h	16;"	d
+NIDS_RESET	nids.h	43;"	d
+NIDS_TIMED_OUT	nids.h	44;"	d
+NIDS_WARN_IP	nids.h	/^  NIDS_WARN_IP = 1,$/;"	e	enum:__anon2
+NIDS_WARN_IP_HDR	nids.h	/^                  NIDS_WARN_IP_HDR,$/;"	e	enum:__anon3
+NIDS_WARN_IP_INVLIST	nids.h	/^              NIDS_WARN_IP_INVLIST,$/;"	e	enum:__anon3
+NIDS_WARN_IP_OVERLAP	nids.h	/^                NIDS_WARN_IP_OVERLAP,$/;"	e	enum:__anon3
+NIDS_WARN_IP_OVERSIZED	nids.h	/^            NIDS_WARN_IP_OVERSIZED,$/;"	e	enum:__anon3
+NIDS_WARN_IP_SRR	nids.h	/^                    NIDS_WARN_IP_SRR,$/;"	e	enum:__anon3
+NIDS_WARN_SCAN	nids.h	/^        NIDS_WARN_SCAN$/;"	e	enum:__anon2
+NIDS_WARN_TCP	nids.h	/^    NIDS_WARN_TCP,$/;"	e	enum:__anon2
+NIDS_WARN_TCP_BADFLAGS	nids.h	/^                            NIDS_WARN_TCP_BADFLAGS$/;"	e	enum:__anon3
+NIDS_WARN_TCP_BIGQUEUE	nids.h	/^                          NIDS_WARN_TCP_BIGQUEUE,$/;"	e	enum:__anon3
+NIDS_WARN_TCP_HDR	nids.h	/^                        NIDS_WARN_TCP_HDR,$/;"	e	enum:__anon3
+NIDS_WARN_TCP_TOOMUCH	nids.h	/^                      NIDS_WARN_TCP_TOOMUCH,$/;"	e	enum:__anon3
+NIDS_WARN_UDP	nids.h	/^      NIDS_WARN_UDP,$/;"	e	enum:__anon2
+NIDS_WARN_UNDEFINED	nids.h	/^          NIDS_WARN_UNDEFINED = 0,$/;"	e	enum:__anon3
+RTE_LOGTYPE_L2FWD	base_main.c	86;"	d	file:
+RTE_LOGTYPE_L2FWD	main.c	106;"	d	file:
+RTE_TARGET	Makefile	/^RTE_TARGET ?= x86_64-native-linuxapp-gcc$/;"	m
+RTE_TEST_RX_DESC_DEFAULT	base_main.c	97;"	d	file:
+RTE_TEST_RX_DESC_DEFAULT	main.c	117;"	d	file:
+RTE_TEST_RX_DESC_DEFAULT	node.h	8;"	d
+RTE_TEST_TX_DESC_DEFAULT	base_main.c	98;"	d	file:
+RTE_TEST_TX_DESC_DEFAULT	main.c	118;"	d	file:
+RTE_TEST_TX_DESC_DEFAULT	node.h	7;"	d
+SRCS-y	Makefile	/^SRCS-y := node.c main.c nids_interface.c$/;"	m
+STRCMP	config.h	37;"	d
+STRCPY	config.h	36;"	d
+SZLACZEK	sniff.c	12;"	d	file:
+UNUSED	nids_interface.c	12;"	d	file:
+UNUSED	sniff.c	15;"	d	file:
+_MOD_INTERFASE_H__	nids_interface.h	2;"	d
+_NIDS_NIDS_H	nids.h	2;"	d
+__CONFIG_H__	config.h	2;"	d
+__NODE__	node.h	2;"	d
+__rte_cache_aligned	base_main.c	/^} __rte_cache_aligned;$/;"	v	typeref:struct:l2fwd_port_statistics
+__rte_cache_aligned	base_main.c	/^} __rte_cache_aligned;$/;"	v	typeref:struct:lcore_queue_conf
+__rte_cache_aligned	main.c	/^} __rte_cache_aligned;$/;"	v	typeref:struct:l2fwd_port_statistics
+__rte_cache_aligned	main.c	/^} __rte_cache_aligned;$/;"	v	typeref:struct:lcore_queue_conf
+a_tcp	nids.h	/^                                                                                                                                                            struct tcp_stream *a_tcp;$/;"	m	struct:tcp_timeout	typeref:struct:tcp_timeout::tcp_stream
+ack_seq	nids.h	/^                                                              u_int ack_seq;$/;"	m	struct:half_stream
+acked	nids.h	/^                                                          u_int acked;$/;"	m	struct:half_stream
+action	nids.h	/^                                                                                                                                                                            u_int action;$/;"	m	struct:nids_chksum_ctl
+addr	nids.h	/^                                                                                        struct tuple4 addr;$/;"	m	struct:tcp_stream	typeref:struct:tcp_stream::tuple4
+adres	sniff.c	/^adres (struct tuple4 addr)$/;"	f
+adres1	nids_interface.c	/^char * adres1 (struct tuple4 addr)$/;"	f
+bufsize	nids.h	/^                                                    int bufsize;$/;"	m	struct:half_stream
+check_all_ports_link_status	base_main.c	/^check_all_ports_link_status(uint16_t port_num, uint32_t port_mask)$/;"	f	file:
+check_all_ports_link_status	main.c	/^check_all_ports_link_status(uint16_t port_num, uint32_t port_mask)$/;"	f	file:
+client	nids.h	/^                                                                                              struct half_stream client;$/;"	m	struct:tcp_stream	typeref:struct:tcp_stream::half_stream
+collect	nids.h	/^                                        char collect;$/;"	m	struct:half_stream
+collect_urg	nids.h	/^                                          char collect_urg;$/;"	m	struct:half_stream
+count	nids.h	/^                                                int count;$/;"	m	struct:half_stream
+count_new	nids.h	/^                                                  int count_new;$/;"	m	struct:half_stream
+count_new_urg	nids.h	/^                                                                    u_char count_new_urg;$/;"	m	struct:half_stream
+cur_time	nids_interface.c	/^struct timeval prev_time,cur_time;$/;"	v	typeref:struct:
+curr_ts	nids.h	/^                                                                                u_int curr_ts; $/;"	m	struct:half_stream
+daddr	nids.h	/^                                    u_int daddr;$/;"	m	struct:tuple4
+data	nids.h	/^                                            char *data;$/;"	m	struct:half_stream
+database	base_main.c	/^hs_database_t *database = NULL;$/;"	v
+database	main.c	/^hs_database_t *database = NULL;$/;"	v
+dest	nids.h	/^                                u_short dest;$/;"	m	struct:tuple4
+dev_addon	nids.h	/^                                                                                                                            int dev_addon;$/;"	m	struct:nids_prm
+device	nids.h	/^                                                                                                                      char *device;$/;"	m	struct:nids_prm
+do_log	sniff.c	/^            do_log (char *adres_txt, char *data, int ile)$/;"	f
+dropped	base_main.c	/^	uint64_t dropped;$/;"	m	struct:l2fwd_port_statistics	file:
+dropped	main.c	/^	uint64_t dropped;$/;"	m	struct:l2fwd_port_statistics	file:
+err	main.c	/^hs_error_t err;$/;"	v
+ethHdr	main.c	/^struct ether_hdr *ethHdr = NULL;$/;"	v	typeref:struct:ether_hdr
+eventHandler	main.c	/^static int eventHandler(unsigned int id,unsigned long long from,unsigned long long to,unsigned int flags,void * ctx){$/;"	f	file:
+filename	nids.h	/^                                                                                                                        char *filename;$/;"	m	struct:nids_prm
+first_data_seq	nids.h	/^                                                                u_int first_data_seq;$/;"	m	struct:half_stream
+flags	main.c	/^unsigned int flags[4]={HS_FLAG_DOTALL,HS_FLAG_DOTALL,HS_FLAG_DOTALL,HS_FLAG_DOTALL};$/;"	v
+force_quit	base_main.c	/^static volatile bool force_quit;$/;"	v	file:
+force_quit	main.c	/^static volatile bool force_quit;$/;"	v	file:
+g_port	nids_interface.c	/^int g_port = 0;$/;"	v
+g_proc_id	nids_interface.c	/^int g_proc_id = 0;$/;"	v
+half_stream	nids.h	/^                                    struct half_stream$/;"	s
+hash_index	nids.h	/^                                                                                                      int hash_index;$/;"	m	struct:tcp_stream
+ids	main.c	/^unsigned int ids[4]={0,1,2,3};$/;"	v
+int_ntoa	sniff.c	14;"	d	file:
+interfaceSetup	node.c	/^int32_t interfaceSetup(void)$/;"	f
+intfAvail	node.h	/^    uint32_t intfAvail;$/;"	m	struct:numa_Info_s
+intfInUse	node.h	/^    uint8_t intfInUse;$/;"	m	struct:numa_Info_s
+intfTotal	node.h	/^    uint8_t intfTotal;$/;"	m	struct:numa_Info_s
+intfUsed	node.h	/^    uint32_t intfUsed;$/;"	m	struct:numa_Info_s
+ipHdr	main.c	/^struct ipv4_hdr *ipHdr = NULL;$/;"	v	typeref:struct:ipv4_hdr
+ip_filter	nids.h	/^                                                                                                                                          int (*ip_filter) (void); \/\/add void by dodng12@163.com$/;"	m	struct:nids_prm
+ip_head	main.c	/^struct ipv4_hdr *ip_head = NULL;$/;"	v	typeref:struct:ipv4_hdr
+k	main.c	/^int k=0;$/;"	v
+l2fwd_dst_ports	base_main.c	/^static uint32_t l2fwd_dst_ports[RTE_MAX_ETHPORTS];$/;"	v	file:
+l2fwd_dst_ports	main.c	/^static uint32_t l2fwd_dst_ports[RTE_MAX_ETHPORTS];$/;"	v	file:
+l2fwd_enabled_port_mask	base_main.c	/^static uint32_t l2fwd_enabled_port_mask = 0;$/;"	v	file:
+l2fwd_enabled_port_mask	main.c	/^static uint32_t l2fwd_enabled_port_mask = 0;$/;"	v	file:
+l2fwd_launch_one_lcore	base_main.c	/^l2fwd_launch_one_lcore(__attribute__((unused)) void *dummy)$/;"	f	file:
+l2fwd_launch_one_lcore	main.c	/^l2fwd_launch_one_lcore(__attribute__((unused)) void *dummy)$/;"	f	file:
+l2fwd_mac_updating	base_main.c	/^l2fwd_mac_updating(struct rte_mbuf *m, unsigned dest_portid)$/;"	f	file:
+l2fwd_mac_updating	main.c	/^l2fwd_mac_updating(struct rte_mbuf *m, unsigned dest_portid)$/;"	f	file:
+l2fwd_main_loop	base_main.c	/^l2fwd_main_loop(void)$/;"	f	file:
+l2fwd_main_loop	main.c	/^l2fwd_main_loop(void)$/;"	f	file:
+l2fwd_parse_args	base_main.c	/^l2fwd_parse_args(int argc, char **argv)$/;"	f	file:
+l2fwd_parse_args	main.c	/^l2fwd_parse_args(int argc, char **argv)$/;"	f	file:
+l2fwd_parse_nqueue	base_main.c	/^l2fwd_parse_nqueue(const char *q_arg)$/;"	f	file:
+l2fwd_parse_nqueue	main.c	/^l2fwd_parse_nqueue(const char *q_arg)$/;"	f	file:
+l2fwd_parse_portmask	base_main.c	/^l2fwd_parse_portmask(const char *portmask)$/;"	f	file:
+l2fwd_parse_portmask	main.c	/^l2fwd_parse_portmask(const char *portmask)$/;"	f	file:
+l2fwd_parse_timer_period	base_main.c	/^l2fwd_parse_timer_period(const char *q_arg)$/;"	f	file:
+l2fwd_parse_timer_period	main.c	/^l2fwd_parse_timer_period(const char *q_arg)$/;"	f	file:
+l2fwd_pktmbuf_pool	base_main.c	/^struct rte_mempool * l2fwd_pktmbuf_pool = NULL;$/;"	v	typeref:struct:rte_mempool
+l2fwd_pktmbuf_pool	main.c	/^struct rte_mempool * l2fwd_pktmbuf_pool = NULL;$/;"	v	typeref:struct:rte_mempool
+l2fwd_port_statistics	base_main.c	/^struct l2fwd_port_statistics {$/;"	s	file:
+l2fwd_port_statistics	main.c	/^struct l2fwd_port_statistics {$/;"	s	file:
+l2fwd_ports_eth_addr	base_main.c	/^static struct ether_addr l2fwd_ports_eth_addr[RTE_MAX_ETHPORTS];$/;"	v	typeref:struct:ether_addr	file:
+l2fwd_ports_eth_addr	main.c	/^static struct ether_addr l2fwd_ports_eth_addr[RTE_MAX_ETHPORTS];$/;"	v	typeref:struct:ether_addr	file:
+l2fwd_rx_queue_per_lcore	base_main.c	/^static unsigned int l2fwd_rx_queue_per_lcore = 1;$/;"	v	file:
+l2fwd_rx_queue_per_lcore	main.c	/^static unsigned int l2fwd_rx_queue_per_lcore = 1;$/;"	v	file:
+l2fwd_simple_forward	base_main.c	/^l2fwd_simple_forward(struct rte_mbuf *m, unsigned portid)$/;"	f	file:
+l2fwd_simple_forward	main.c	/^l2fwd_simple_forward(struct rte_mbuf *m, unsigned portid)$/;"	f	file:
+l2fwd_usage	base_main.c	/^l2fwd_usage(const char *prgname)$/;"	f	file:
+l2fwd_usage	main.c	/^l2fwd_usage(const char *prgname)$/;"	f	file:
+lcoreAvail	node.h	/^    uint32_t lcoreAvail;$/;"	m	struct:numa_Info_s
+lcoreInUse	node.h	/^    uint8_t lcoreInUse;$/;"	m	struct:numa_Info_s
+lcoreTotal	node.h	/^    uint8_t lcoreTotal;$/;"	m	struct:numa_Info_s
+lcoreUsed	node.h	/^    uint32_t lcoreUsed;$/;"	m	struct:numa_Info_s
+lcore_queue_conf	base_main.c	/^struct lcore_queue_conf lcore_queue_conf[RTE_MAX_LCORE];$/;"	v	typeref:struct:lcore_queue_conf
+lcore_queue_conf	base_main.c	/^struct lcore_queue_conf {$/;"	s	file:
+lcore_queue_conf	main.c	/^struct lcore_queue_conf lcore_queue_conf[RTE_MAX_LCORE];$/;"	v	typeref:struct:lcore_queue_conf
+lcore_queue_conf	main.c	/^struct lcore_queue_conf {$/;"	s	file:
+lgopts	base_main.c	/^static const struct option lgopts[] = {$/;"	v	typeref:struct:option	file:
+lgopts	main.c	/^static const struct option lgopts[] = {$/;"	v	typeref:struct:option	file:
+list	nids.h	/^                                                                                    struct skbuff *list;$/;"	m	struct:half_stream	typeref:struct:half_stream::skbuff
+listeners	nids.h	/^                                                                                            struct lurker_node *listeners;$/;"	m	struct:tcp_stream	typeref:struct:tcp_stream::lurker_node
+listtail	nids.h	/^                                                                                      struct skbuff *listtail;$/;"	m	struct:half_stream	typeref:struct:half_stream::skbuff
+logfd	sniff.c	/^            int logfd;$/;"	v
+mac_updating	base_main.c	/^static int mac_updating = 1;$/;"	v	file:
+mac_updating	main.c	/^static int mac_updating = 1;$/;"	v	file:
+main	base_main.c	/^main(int argc, char **argv)$/;"	f
+main	main.c	/^main(int argc, char **argv)$/;"	f
+mask	nids.h	/^                                                                                                                                                                        u_int mask;$/;"	m	struct:nids_chksum_ctl
+match	main.c	/^int match = 0;$/;"	v
+multiproc	nids.h	/^                                                                                                                                                    int multiproc;$/;"	m	struct:nids_prm
+n_hosts	nids.h	/^                                                                                                                    int n_hosts;$/;"	m	struct:nids_prm
+n_rx_port	base_main.c	/^	unsigned n_rx_port;$/;"	m	struct:lcore_queue_conf	file:
+n_rx_port	main.c	/^	unsigned n_rx_port;$/;"	m	struct:lcore_queue_conf	file:
+n_tcp_streams	nids.h	/^                                                                                                                  int n_tcp_streams;$/;"	m	struct:nids_prm
+nb_rxd	base_main.c	/^static uint16_t nb_rxd = RTE_TEST_RX_DESC_DEFAULT;$/;"	v	file:
+nb_rxd	main.c	/^static uint16_t nb_rxd = RTE_TEST_RX_DESC_DEFAULT;$/;"	v	file:
+nb_txd	base_main.c	/^static uint16_t nb_txd = RTE_TEST_TX_DESC_DEFAULT;$/;"	v	file:
+nb_txd	main.c	/^static uint16_t nb_txd = RTE_TEST_TX_DESC_DEFAULT;$/;"	v	file:
+netaddr	nids.h	/^                                                                                                                                                                    u_int netaddr;$/;"	m	struct:nids_chksum_ctl
+next	nids.h	/^                                                                                                                                                                struct tcp_timeout *next;$/;"	m	struct:tcp_timeout	typeref:struct:tcp_timeout::tcp_timeout
+next_free	nids.h	/^                                                                                                              struct tcp_stream *next_free;$/;"	m	struct:tcp_stream	typeref:struct:tcp_stream::tcp_stream
+next_node	nids.h	/^                                                                                                  struct tcp_stream *next_node;$/;"	m	struct:tcp_stream	typeref:struct:tcp_stream::tcp_stream
+next_time	nids.h	/^                                                                                                        struct tcp_stream *next_time;$/;"	m	struct:tcp_stream	typeref:struct:tcp_stream::tcp_stream
+nids_chksum_ctl	nids.h	/^                                                                                                                                                                  struct nids_chksum_ctl {$/;"	s
+nids_prm	nids.h	/^                                                                                                                struct nids_prm$/;"	s
+nids_state	nids.h	/^                                                                                          char nids_state;$/;"	m	struct:tcp_stream
+no_mem	nids.h	/^                                                                                                                                        void (*no_mem) (char *);$/;"	m	struct:nids_prm
+numaNodeInfo	node.c	/^numa_Info_t numaNodeInfo[MAX_NUMANODE];$/;"	v
+numa_Info_s	node.h	/^typedef struct numa_Info_s{$/;"	s
+numa_Info_t	node.h	/^} numa_Info_t;$/;"	t	typeref:struct:numa_Info_s
+offset	nids.h	/^                                              int offset;$/;"	m	struct:half_stream
+one_loop_less	nids.h	/^                                                                                                                                                int one_loop_less;$/;"	m	struct:nids_prm
+pattern	base_main.c	/^char * pattern = NULL;$/;"	v
+pattern	main.c	/^const char * pattern[4] = {$/;"	v
+pcap_desc	nids.h	/^                                                                                                                                                          pcap_t *pcap_desc;$/;"	m	struct:nids_prm
+pcap_filter	nids.h	/^                                                                                                                                            char *pcap_filter;$/;"	m	struct:nids_prm
+pcap_timeout	nids.h	/^                                                                                                                                                  int pcap_timeout;$/;"	m	struct:nids_prm
+pkt_num	nids_interface.c	/^uint64_t pkt_num = 0;$/;"	v
+populateNodeInfo	node.c	/^int32_t populateNodeInfo (void)$/;"	f
+portConf	node.c	/^static const struct rte_eth_conf portConf = {$/;"	v	typeref:struct:rte_eth_conf	file:
+port_conf	base_main.c	/^static const struct rte_eth_conf port_conf = {$/;"	v	typeref:struct:rte_eth_conf	file:
+port_conf	main.c	/^static const struct rte_eth_conf port_conf = {$/;"	v	typeref:struct:rte_eth_conf	file:
+port_statistics	base_main.c	/^struct l2fwd_port_statistics port_statistics[RTE_MAX_ETHPORTS];$/;"	v	typeref:struct:l2fwd_port_statistics
+port_statistics	main.c	/^struct l2fwd_port_statistics port_statistics[RTE_MAX_ETHPORTS];$/;"	v	typeref:struct:l2fwd_port_statistics
+prev	nids.h	/^                                                                                                                                                                  struct tcp_timeout *prev;$/;"	m	struct:tcp_timeout	typeref:struct:tcp_timeout::tcp_timeout
+prev_node	nids.h	/^                                                                                                    struct tcp_stream *prev_node;$/;"	m	struct:tcp_stream	typeref:struct:tcp_stream::tcp_stream
+prev_time	nids.h	/^                                                                                                          struct tcp_stream *prev_time;$/;"	m	struct:tcp_stream	typeref:struct:tcp_stream::tcp_stream
+prev_time	nids_interface.c	/^struct timeval prev_time,cur_time;$/;"	v	typeref:struct:timeval
+print_ether_addr	main.c	/^print_ether_addr(const char *what, struct ether_addr *eth_addr)$/;"	f	file:
+print_stats	base_main.c	/^print_stats(void)$/;"	f	file:
+print_stats	main.c	/^static void print_stats(void)$/;"	f	file:
+process_init	nids_interface.c	/^int process_init(void)$/;"	f
+process_pkt_callback	nids_interface.c	/^                                                                                                                                                                       int process_pkt_callback(void* data,uint16_t data_len)$/;"	f
+promisc	nids.h	/^                                                                                                                                              int promisc;$/;"	m	struct:nids_prm
+protocol	main.c	/^char * protocol={"http","dns","frp","http"};$/;"	v
+ptr	main.c	/^unsigned char * ptr;$/;"	v
+queue_limit	nids.h	/^                                                                                                                                                      int queue_limit;$/;"	m	struct:nids_prm
+read	nids.h	/^                                                                                                            int read;$/;"	m	struct:tcp_stream
+reserved	nids.h	/^                                                                                                                                                                                u_int reserved;$/;"	m	struct:nids_chksum_ctl
+rmem_alloc	nids.h	/^                                                      int rmem_alloc;$/;"	m	struct:half_stream
+rx	base_main.c	/^	uint64_t rx;$/;"	m	struct:l2fwd_port_statistics	file:
+rx	main.c	/^	uint64_t rx;$/;"	m	struct:l2fwd_port_statistics	file:
+rx	node.h	/^    struct rte_mempool *rx[MAX_LCORECOUNT];$/;"	m	struct:numa_Info_s	typeref:struct:numa_Info_s::rte_mempool
+rx_port_list	base_main.c	/^	unsigned rx_port_list[MAX_RX_QUEUE_PER_LCORE];$/;"	m	struct:lcore_queue_conf	file:
+rx_port_list	main.c	/^	unsigned rx_port_list[MAX_RX_QUEUE_PER_LCORE];$/;"	m	struct:lcore_queue_conf	file:
+rxmodeTemp	node.c	/^static const struct rte_eth_rxmode rxmodeTemp = {};$/;"	v	typeref:struct:rte_eth_rxmode	file:
+saddr	nids.h	/^                                  u_int saddr;$/;"	m	struct:tuple4
+scan_delay	nids.h	/^                                                                                                                                    int scan_delay;$/;"	m	struct:nids_prm
+scan_num_hosts	nids.h	/^                                                                                                                                  int scan_num_hosts;$/;"	m	struct:nids_prm
+scan_num_ports	nids.h	/^                                                                                                                                      int scan_num_ports;$/;"	m	struct:nids_prm
+scratch	main.c	/^hs_scratch_t *scratch = NULL;$/;"	v
+seq	nids.h	/^                                                            u_int seq;$/;"	m	struct:half_stream
+server	nids.h	/^                                                                                                struct half_stream server;$/;"	m	struct:tcp_stream	typeref:struct:tcp_stream::half_stream
+short_options	base_main.c	/^static const char short_options[] =$/;"	v	file:
+short_options	main.c	/^static const char short_options[] =$/;"	v	file:
+signal_handler	base_main.c	/^signal_handler(int signum)$/;"	f	file:
+signal_handler	main.c	/^signal_handler(int signum)$/;"	f	file:
+sk_buff_size	nids.h	/^                                                                                                                          int sk_buff_size;$/;"	m	struct:nids_prm
+sniff_callback	sniff.c	/^                  sniff_callback (struct tcp_stream *a_tcp, void **this_time_not_needed)$/;"	f
+source	nids.h	/^                              u_short source;$/;"	m	struct:tuple4
+state	nids.h	/^                                      char state;$/;"	m	struct:half_stream
+syslog	nids.h	/^                                                                                                                              void (*syslog) (void);  \/\/add void by dodng12@163.com$/;"	m	struct:nids_prm
+syslog_level	nids.h	/^                                                                                                                                int syslog_level;$/;"	m	struct:nids_prm
+tcp_callback	nids_interface.c	/^tcp_callback (struct tcp_stream *a_tcp, void ** this_time_not_needed)$/;"	f
+tcp_stream	nids.h	/^                                                                                      struct tcp_stream$/;"	s
+tcp_timeout	nids.h	/^                                                                                                                                                          struct tcp_timeout$/;"	s
+tcp_workarounds	nids.h	/^                                                                                                                                                        int tcp_workarounds;$/;"	m	struct:nids_prm
+test	main.c	/^char test[1]={"a"};$/;"	v
+test_main	sniff.c	/^                                                                                                                                                                                            int test_main (void)$/;"	f
+timeout	nids.h	/^                                                                                                                                                              struct timeval timeout;$/;"	m	struct:tcp_timeout	typeref:struct:tcp_timeout::timeval
+timer_period	base_main.c	/^static uint64_t timer_period = 10; \/* default period is 10 seconds *\/$/;"	v	file:
+timer_period	main.c	/^static uint64_t timer_period = 10; \/* default period is 10 seconds *\/$/;"	v	file:
+ts_on	nids.h	/^                                                                            u_char ts_on;$/;"	m	struct:half_stream
+tuple4	nids.h	/^                            struct tuple4$/;"	s
+tx	base_main.c	/^	uint64_t tx;$/;"	m	struct:l2fwd_port_statistics	file:
+tx	main.c	/^	uint64_t tx;$/;"	m	struct:l2fwd_port_statistics	file:
+tx	node.h	/^    struct rte_mempool *tx[MAX_LCORECOUNT];$/;"	m	struct:numa_Info_s	typeref:struct:numa_Info_s::rte_mempool
+tx_buffer	base_main.c	/^static struct rte_eth_dev_tx_buffer *tx_buffer[RTE_MAX_ETHPORTS];$/;"	v	typeref:struct:rte_eth_dev_tx_buffer	file:
+tx_buffer	main.c	/^static struct rte_eth_dev_tx_buffer *tx_buffer[RTE_MAX_ETHPORTS];$/;"	v	typeref:struct:rte_eth_dev_tx_buffer	file:
+txmodeTemp	node.c	/^static const struct rte_eth_txmode txmodeTemp = {};$/;"	v	typeref:struct:rte_eth_txmode	file:
+urg_count	nids.h	/^                                                        int urg_count;$/;"	m	struct:half_stream
+urg_ptr	nids.h	/^                                                                        u_int urg_ptr;$/;"	m	struct:half_stream
+urg_seen	nids.h	/^                                                                      u_char urg_seen;$/;"	m	struct:half_stream
+urgdata	nids.h	/^                                                                  u_char urgdata;$/;"	m	struct:half_stream
+user	nids.h	/^                                                                                                                void *user;$/;"	m	struct:tcp_stream
+window	nids.h	/^                                                                          u_short window;$/;"	m	struct:half_stream
+write_file	nids_interface.c	/^FILE *write_file = NULL;$/;"	v
+wscale	nids.h	/^                                                                                  u_int wscale;$/;"	m	struct:half_stream
+wscale_on	nids.h	/^                                                                              u_char wscale_on;$/;"	m	struct:half_stream

@@ -1,0 +1,308 @@
+50d49
+< 
+56d54
+< #include <rte_memzone.h>
+58d55
+< #include <rte_per_lcore.h>
+67d63
+< #include <rte_pci.h>
+72d67
+< #include <rte_ring.h>
+76,79d70
+< #include "node.h"
+< #include "config.h"
+< #include <hs.h>
+< 
+81a73,75
+> /* MAC updating enabled by default */
+> static int mac_updating = 1;
+> 
+97,100c91
+< /////////
+< hs_database_t *database = NULL;
+< char * pattern = NULL;
+< /////////
+---
+> 
+129c120
+< 		.hw_strip_crc   = 0, /**< CRC stripped by hardware */
+---
+> 		.hw_strip_crc   = 1, /**< CRC stripped by hardware */
+197c188
+< l2fwd_simple_forward(struct rte_mbuf *m, unsigned portid)
+---
+> l2fwd_mac_updating(struct rte_mbuf *m, unsigned dest_portid)
+201,203d191
+< 	unsigned dst_port;
+< 	int sent;
+< 	struct rte_eth_dev_tx_buffer *buffer;
+205d192
+< 	dst_port = l2fwd_dst_ports[portid];
+210c197
+< 	*((uint64_t *)tmp) = 0x000000000002 + ((uint64_t)dst_port << 40);
+---
+> 	*((uint64_t *)tmp) = 0x000000000002 + ((uint64_t)dest_portid << 40);
+213c200,213
+< 	ether_addr_copy(&l2fwd_ports_eth_addr[dst_port], &eth->s_addr);
+---
+> 	ether_addr_copy(&l2fwd_ports_eth_addr[dest_portid], &eth->s_addr);
+> }
+> 
+> static void
+> l2fwd_simple_forward(struct rte_mbuf *m, unsigned portid)
+> {
+> 	unsigned dst_port;
+> 	int sent;
+> 	struct rte_eth_dev_tx_buffer *buffer;
+> 
+> 	dst_port = l2fwd_dst_ports[portid];
+> 
+> 	if (mac_updating)
+> 		l2fwd_mac_updating(m, dst_port);
+221,230d220
+< static int eventHandler(unsigned int id,unsigned long long from,unsigned long long to,unsigned int flags,void * ctx){
+<     int32_t *val = (int32_t *)ctx;
+<     (void )(id);
+<     (void )(from);
+<     (void)(flags);
+<     *val = 1;
+<     printf("match for pattern \"%s\" at offset %llu \n",(char * )ctx,to);
+<     //match += 1;
+<     return 0;
+< }
+245,246c235
+<     struct ether_hdr *ethHdr = NULL;
+<     struct ipv4_hdr *ipHdr = NULL;
+---
+> 
+267,273c256
+<     //////////////////////
+<     hs_scratch_t *scratch = NULL;
+<     if(hs_alloc_scratch(database,&scratch) != HS_SUCCESS){
+<         printf("error:unable to allocate scratch space.exiting.\n");
+<         return -1;
+<     }
+<     //////////////////////
+---
+> 
+322c305
+< 			nb_rx = rte_eth_rx_burst((uint8_t) portid, 0,
+---
+> 			nb_rx = rte_eth_rx_burst(portid, 0,
+324c307
+<           
+---
+> 
+330,346c313
+< 				/////////
+<                     
+< 				ethHdr = rte_pktmbuf_mtod(m, void *);
+<                 ipHdr  = (struct ipv4_hdr *) ((char *)(ethHdr + 1));
+<                 if (hs_scan(database,(const char *)ipHdr,20,0,scratch,eventHandler,& pattern) != HS_SUCCESS){
+<                     printf("error:unable to scan input buffer.exiting");
+<                     continue;
+<                 }
+< 
+<                 
+<                 /////////
+<                 l2fwd_simple_forward(m, portid);
+<                 
+<                 /////////
+<                 rte_pktmbuf_free(m);
+<                 continue;
+<                 /////////
+---
+> 				l2fwd_simple_forward(m, portid);
+350,351d316
+<     
+<         hs_free_scratch(scratch);
+357d321
+< 
+359,368c323
+<     unsigned lcore_id;
+<     lcore_id = rte_lcore_id();
+<         if(lcore_id == 1){ 
+<         }   
+<         if(lcore_id == 0){ 
+< //	         l2fwd_main_loop();
+<         }   
+<     return 0;
+< 
+< 
+---
+> 	return 0;
+378c333,337
+< 		   "  -T PERIOD: statistics will be refreshed each PERIOD seconds (0 to disable, 10 default, 86400 maximum)\n",
+---
+> 		   "  -T PERIOD: statistics will be refreshed each PERIOD seconds (0 to disable, 10 default, 86400 maximum)\n"
+> 		   "  --[no-]mac-updating: Enable or disable MAC addresses updating (enabled by default)\n"
+> 		   "      When enabled:\n"
+> 		   "       - The source MAC address is replaced by the TX port MAC address\n"
+> 		   "       - The destination MAC address is replaced by 02:00:00:00:00:TX_PORT_ID\n",
+432a392,414
+> static const char short_options[] =
+> 	"p:"  /* portmask */
+> 	"q:"  /* number of queues */
+> 	"T:"  /* timer period */
+> 	;
+> 
+> #define CMD_LINE_OPT_MAC_UPDATING "mac-updating"
+> #define CMD_LINE_OPT_NO_MAC_UPDATING "no-mac-updating"
+> 
+> enum {
+> 	/* long options mapped to a short option */
+> 
+> 	/* first long only option value must be >= 256, so that we won't
+> 	 * conflict with short options */
+> 	CMD_LINE_OPT_MIN_NUM = 256,
+> };
+> 
+> static const struct option lgopts[] = {
+> 	{ CMD_LINE_OPT_MAC_UPDATING, no_argument, &mac_updating, 1},
+> 	{ CMD_LINE_OPT_NO_MAC_UPDATING, no_argument, &mac_updating, 0},
+> 	{NULL, 0, 0, 0}
+> };
+> 
+441,443d422
+< 	static struct option lgopts[] = {
+< 		{NULL, 0, 0, 0}
+< 	};
+447c426
+< 	while ((opt = getopt_long(argc, argvopt, "p:q:T:",
+---
+> 	while ((opt = getopt_long(argc, argvopt, short_options,
+484,485c463
+< 			l2fwd_usage(prgname);
+< 			return -1;
+---
+> 			break;
+497c475
+< 	optind = 0; /* reset getopt lib */
+---
+> 	optind = 1; /* reset getopt lib */
+503c481
+< check_all_ports_link_status(uint8_t port_num, uint32_t port_mask)
+---
+> check_all_ports_link_status(uint16_t port_num, uint32_t port_mask)
+507c485,486
+< 	uint8_t portid, count, all_ports_up, print_flag = 0;
+---
+> 	uint16_t portid;
+> 	uint8_t count, all_ports_up, print_flag = 0;
+526,528c505,507
+< 					printf("Port %d Link Up - speed %u "
+< 						"Mbps - %s\n", (uint8_t)portid,
+< 						(unsigned)link.link_speed,
+---
+> 					printf(
+> 					"Port%d Link Up. Speed %u Mbps - %s\n",
+> 						portid, link.link_speed,
+532,533c511
+< 					printf("Port %d Link Down\n",
+< 						(uint8_t)portid);
+---
+> 					printf("Port %d Link Down\n", portid);
+576,578c554,556
+< 	uint8_t nb_ports;
+< 	uint8_t nb_ports_available;
+< 	uint8_t portid, last_port;
+---
+> 	uint16_t nb_ports;
+> 	uint16_t nb_ports_available;
+> 	uint16_t portid, last_port;
+582,583d559
+<     char * pattern="[f|F]ile";
+< 
+599,634c575,577
+< //////////////////////////////////////
+<     ret = rte_eal_has_hugepages();
+<     if(unlikely(ret < 0)){
+<         rte_panic("\n Error:no huge page\n");
+<         exit(EXIT_FAILURE);
+<     }
+< 
+<     ret = populateNodeInfo();
+<     if (unlikely(ret < 0)){
+<         rte_panic("\n Error:in populating numa node info\n");
+<         exit(EXIT_FAILURE);
+<     }
+<     
+<     if(interfaceSetup() < 0){
+<         rte_panic("Error: interface setup failed\n");
+<         exit(EXIT_FAILURE);
+<     }
+< 
+<     hs_compile_error_t *compile_err;
+<     printf("pattern=%s \n HS_FLAG_DOTALL=%d \n HS_MODE_BLOCK=%d \n &database=%d \n &compile_err=%d \n", pattern,
+<             HS_FLAG_DOTALL, HS_MODE_BLOCK,(unsigned int)&database,(unsigned int)&compile_err);
+<     if(hs_compile(pattern,HS_FLAG_DOTALL,HS_MODE_BLOCK,NULL,&database,&compile_err) != HS_SUCCESS){
+<         printf("error:unable to compile pattern \"%s\": %S\n,pattern,compile_err->message ");
+<         hs_free_compile_error(compile_err);
+<         return -1;
+<     }
+<     #if 0
+<         ret = 0;
+<         rte_eal_reamote_launch(l2fwd_main_loop,(void *)&ret, 1);
+<         ret = 1;
+<         rte_eal_remote_launch(l2fwd_main_loop,(void *)&ret, 2);
+<     #endif
+<   //      while(1)
+<             rte_delay_ms(1000);
+<         hs_free_database(database);
+< /////////////////////////////////////////
+---
+> 
+> 	printf("MAC updating %s\n", mac_updating ? "enabled" : "disabled");
+> 
+702c645
+< 		printf("Lcore %u: RX port %u\n", rx_lcore_id, (unsigned) portid);
+---
+> 		printf("Lcore %u: RX port %u\n", rx_lcore_id, portid);
+711c654
+< 			printf("Skipping disabled port %u\n", (unsigned) portid);
+---
+> 			printf("Skipping disabled port %u\n", portid);
+716c659
+< 		printf("Initializing port %u... ", (unsigned) portid);
+---
+> 		printf("Initializing port %u... ", portid);
+721,722c664,672
+< 				  ret, (unsigned) portid);
+< 
+---
+> 				  ret, portid);
+> #if 0
+> 		ret = rte_eth_dev_adjust_nb_rx_tx_desc(portid, &nb_rxd,
+> 						       &nb_txd);
+> 		if (ret < 0)
+> 			rte_exit(EXIT_FAILURE,
+> 				 "Cannot adjust number of descriptors: err=%d, port=%u\n",
+> 				 ret, portid);
+> #endif
+733c683
+< 				  ret, (unsigned) portid);
+---
+> 				  ret, portid);
+742c692
+< 				ret, (unsigned) portid);
+---
+> 				ret, portid);
+750c700
+< 					(unsigned) portid);
+---
+> 					portid);
+758,759c708,710
+< 				rte_exit(EXIT_FAILURE, "Cannot set error callback for "
+< 						"tx buffer on port %u\n", (unsigned) portid);
+---
+> 			rte_exit(EXIT_FAILURE,
+> 			"Cannot set error callback for tx buffer on port %u\n",
+> 				 portid);
+765c716
+< 				  ret, (unsigned) portid);
+---
+> 				  ret, portid);
+772c723
+< 				(unsigned) portid,
+---
+> 				portid,
